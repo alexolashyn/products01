@@ -21,7 +21,6 @@ function getHowHugeDecrease(previous_price, last_price) {
     return previous_price - last_price > 0.1 * previous_price;
 }
 
-
 module.exports = {
     getFlag,
     getHowHugeDecrease
