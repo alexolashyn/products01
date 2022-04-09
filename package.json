@@ -1,0 +1,19 @@
+{
+  "name": "price-parcer",
+  "version": "1.0.0",
+  "description": "\"Parcer for prices\"",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksandra2512/products01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleksandra2512/products01/issues"
+  },
+  "homepage": "https://github.com/oleksandra2512/products01#readme"
+}
