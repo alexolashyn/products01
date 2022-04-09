@@ -10,12 +10,12 @@ const {getProducts} = require('./product');
 
 const products = getProducts();
 function  logProductsWithDiscount() {
-    for(let p of products){
-        p.flag=functions.getFlag(p.prices[p.prices.length-2], p.prices[p.prices.length-1]);
+    for (let p of products) {
+        p.flag = functions.getFlag(p.prices[p.prices.length - 2], p.prices[p.prices.length - 1]);
     }
-    const productsForNotifications=[];
-    for(let p of products){
-        switch(p.flag){
+    const productsForNotifications = [];
+    for (let p of products) {
+        switch (p.flag) {
             case FLAG_PRICE_HUGE_DECREASE:
                 productsForNotifications.push(p);
                 break;
@@ -30,9 +30,9 @@ function  logProductsWithDiscount() {
                 break;
         }
     }
-    for(let i=0;i<productsForNotifications.length;i+=1){
+    for (let i = 0; i < productsForNotifications.length; i += 1) {
         console.log(productsForNotifications[i]);
     }
 }
-logProductsWithDiscount();
+    logProductsWithDiscount();
 
