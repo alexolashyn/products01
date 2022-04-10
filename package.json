@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/oleksandra2512/products01/issues"
   },
-  "homepage": "https://github.com/oleksandra2512/products01#readme"
+  "homepage": "https://github.com/oleksandra2512/products01#readme",
+  "dependencies": {
+    "inquire": "^0.4.8",
+    "inquirer": "^8.2.2"
+  }
 }
