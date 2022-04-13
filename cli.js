@@ -14,18 +14,33 @@ async function askUserForProduct(products) {
     try {
         const answer = await inquirer.prompt([
             {
-                message: "Enter product name",
+                name: "Action",
+                message: "Choose an action",
+                type: "list",
+                choices:[
+                    {
+                        name : "Load price of product from page",
+                        value: ACTION_LOAD_PRICE
+                    },
+                    {
+                        name : "Give products from page",
+                        value: ACTION_PRODUCT_STATUS
+                    }
+                ],
+            },
+            {
+                message: "Setup page to load",
+                name: "Page",
+                type: "number",
+                when:({action})=>action===ACTION_LOAD_PRICE,
+            },
+            {
+                message: "Input product name",
                 name: "product_name",
-                type: "input"
+                when:({action})=>action===ACTION_PRODUCT_STATUS,
             },
         ]);
-        console.log("Your answers: ", answer);
-        const interestingProduct=products.find(
-            (product) => product.product === answer.product_name
-        );
-        console.log("The product is found!");
-        console.log("Last price: ");
-        console.log(`${getLastPrice(interestingProduct)}\t${getFlagRepresentation(interestingProduct)}`);
+
     }catch(error){
         console.error("Something went wrong: ", error);
     }
