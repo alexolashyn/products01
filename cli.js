@@ -10,7 +10,8 @@ function getLastPrice(interestingProduct) {
 function getFlagRepresentation(interestingProduct) {
     return functions.getFlag(interestingProduct.prices[interestingProduct.prices.length - 2], interestingProduct.prices[interestingProduct.prices.length - 1]);
 }
-
+const ACTION_LOAD_PRICE="load_products";
+const ACTION_PRODUCT_STATUS = "product_status";
 async function askUserForProduct(products) {
     try {
         const answer = await inquirer.prompt([
